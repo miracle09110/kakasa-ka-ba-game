@@ -1,0 +1,25 @@
+h1 {
+  margin: 0 0 1rem 0;
+  width: 100%;
+  background-color: black;
+  color: white;
+  padding: 2rem;
+  text-align: center;
+}
+
+.categories {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+
+}
+
+.button-container{
+  margin: 3rem;
+  padding: 3rem;
+
+}
+
+.disabled {
+  pointer-events: none;
+}

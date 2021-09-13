@@ -1,0 +1,33 @@
+<h1>
+  {{category | uppercase}}: GRADE {{level}}
+</h1>
+<div *ngIf="showBackdrop" class="backdrop" [style.backgroundColor]="backdropColor"></div>
+<div class="body" >
+  <h2>
+    {{question.value}}
+  </h2>
+  <div *ngIf="question.choices.length">
+    <div class="choice" *ngFor="let choice of question.choices">{{choice | uppercase}}</div>
+  </div>
+  <div *ngIf="question.image">
+    <img class="question" [src]="question.image" />
+  </div>
+</div>
+<div class="footer">
+  <img
+  *ngIf="showButtons"
+  src="https://image.flaticon.com/icons/svg/929/929416.svg"
+  alt="close"
+  (click)="wrong()"
+  />
+  <img
+    *ngIf="showButtons"
+    src="https://image.flaticon.com/icons/png/512/846/846004.png"
+    alt="check"
+    (click)="correct()"
+  />
+  <h1 *ngIf="showSteal" (click)="done()">NAKAWAN NA!</h1>
+</div>
+
+
+

@@ -1,0 +1,51 @@
+button {
+  padding: 5rem;
+  box-sizing: border-box;
+  box-shadow: 1px;
+  border-radius: 5px;
+  margin: 10px;
+  box-shadow: 1px 1px 1px 2px whitesmoke;
+  font-size: xx-large;
+  color: white;
+  border: 0;
+}
+
+button:hover{
+  animation: pulse 0.5s ease-in infinite;
+}
+
+button:disabled{
+  background-color: grey;
+  pointer-events: none;
+}
+
+
+
+.button-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  margin-top: 10rem;
+}
+
+h2 {
+  margin: 0 0 1rem 0;
+  width: 100%;
+  background-color: black;
+  color: white;
+  padding: 2rem;
+  text-align: center;
+}
+
+h4 {
+  font-size: xx-large;
+  margin: 0 0 1rem 0;
+  width: 100%;
+  padding: 2rem;
+  text-align: center;
+}
+
+@keyframes pulse{
+  25%  {transform: scale(0.9);}
+  75%  {transform: scale(1.1);}
+}

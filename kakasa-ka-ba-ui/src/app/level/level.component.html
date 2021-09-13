@@ -1,0 +1,13 @@
+<h2>CATEGORY: {{category | uppercase}}</h2>
+<h4>Pumili ng baytang</h4>
+<div class="button-container">
+  <button 
+  
+    *ngFor="let level of levels" 
+    (click)="click(level.value)" 
+    [style.backgroundColor]="disabled(level.value)? 'gray' : level.color"
+    [disabled]="disabled(level.value)"
+  >Grade {{level.value}}
+  <p>({{level.points}} Points)</p>
+</button>
+</div>

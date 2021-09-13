@@ -1,0 +1,12 @@
+ <h1>Choose a Category</h1>
+  <div class="categories">
+    <div *ngFor="let category of categories"   class="button-container">
+      <next-button 
+        (click)="click(category.value)" 
+        value="{{category.title}}" 
+        [color]="getColor(category.value, category.color)" 
+        [ngClass]="disabled(category.value)? ['disabled']: ['']"
+      ></next-button>
+    </div>
+  </div>
+
